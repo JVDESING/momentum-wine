@@ -1,5 +1,6 @@
 /*  Tipografía e Importaciones  */
 @import url(../fonts/Hortensia\ Regular.ttf);
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 /*  Estilos Globales  */
 body {
@@ -257,6 +258,11 @@ textarea
 {
   grid-area: reset;
 }
-
+.typed-subtitulo {
+  font-family: 'Playfair Display', serif;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  margin-top: 10px;
+}
 
 

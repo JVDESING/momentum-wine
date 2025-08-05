@@ -10,17 +10,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Momentum - Home</title>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
     <header>
-        <img src="./assets/img/Logo Momentum.png"  alt="Logo momentum" class="logo" title="Logo de Momentum">
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+            <img src="./assets/img/Logo Momentum.png" alt="Logo momentum" class="logo" title="Logo de Momentum">
+        </div>  
         <h1 class="texto-h1">Momentum</h1><!-- h1 uno solo por archivo html -->
          <!-- las estiquetas "H" no se pueden saltear, son jerarquicas -->
          <!-- "ul" Lista desordenada// "ol" lista ordenada// "li" item de lista-->
 
     <div>
-        </nav>
+        <nav>
             <ul  id="enlaces-paginas">
                 <li>
                 <a href="./assets/pages/galeria.html">galeria</a>
@@ -73,8 +77,8 @@
     </p> 
     </main>
     <footer>
-        <h2>Derechos reservados momentum</h2>
-        <h2>Hecho por jvdesign</h2>
+        <h2 id="typed" class="typed-subtitulo">Derechos reservados momentum</h2>
+        <h2 id="typed" class="typed-subtitulo">Hecho por jvdesign</h2>
     <nav>
         <ul class="imagenes-apps">
             <li>
@@ -103,6 +107,24 @@
    </footer>
  
 
-                
+        <!-- AOS JS -->
+           <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+           <script>
+            AOS.init();
+           </script> 
+           <!-- Typed.js -->
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script>
+        var typed = new Typed("#typed", {
+            strings: ["Bienvenido a Momentum", "Diseño sensorial", "Marca con propósito"],
+            typeSpeed: 30,          // Escritura más pausada
+            backSpeed: 15,          // Borrado suave
+            backDelay: 1500,        // Pausa entre frases
+            startDelay: 500,        // Retraso inicial antes de arrancar
+            loop: true,
+            smartBackspace: true,   // Borra solo lo diferente entre frases
+            showCursor: false       // Elimina el cursor parpadeante "|"
+        });
+        </script>    
 </body>
 </html>
