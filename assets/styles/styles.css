@@ -265,4 +265,15 @@ textarea
   margin-top: 10px;
 }
 
+.titulo-p
+
+{
+  text-align: center;       /* Centra el texto horizontalmente */
+  font-size: 2.5em;         /* Agranda el texto (ajustable) */
+  font-weight: bold;        /* Opcional: hace el texto más destacado */
+  margin-top: 20px;         /* Espaciado superior */
+  margin-bottom: 20px;      /* Espaciado inferior */
+  color: #ffffff;              /* Color del texto (ajustable) */
+  font-family: 'Segoe UI', sans-serif; /* Fuente legible y moderna */
+}
 
