@@ -1,0 +1,36 @@
+@use 'variables' as v;
+
+
+main {
+  padding: 20px;
+  color: v.$color-texto;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+#carouselExampleFade {
+  max-width: 800px;
+  margin: auto;
+}
+
+#titulo-galeria {
+  color: v.$color-texto;
+}
+
+#titulo-momentum {
+  color: v.$color-texto;
+}
+
+.titulo-p {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 20px 0;
+  color: v.$color-texto;
+  font-family: v.$font-secundaria;
+}

@@ -1,0 +1,219 @@
+@use 'variables' as v;
+
+/*  TIENDA  */
+.body-tienda {
+  margin: 0% auto;
+  max-width: 1200px;
+  background-color: rgb(71, 20, 17);
+}
+
+.icono-cart {
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  stroke: antiquewhite;
+}
+.icono-cart :hover {
+  cursor: pointer;
+}
+.titulo-tienda {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.item img.libro1 {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px; /* opcional: bordes suaves */
+}
+.img {
+  max-width: 100%;
+}
+
+.header-tienda {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0 40px 0;
+  align-items: center;
+}
+.contenedor-icono {
+  display: flex;
+  justify-content: flex-end; /* Todo alineado a la derecha */
+  align-items: center;       /* Centrado vertical */
+  position: relative;        /* Para que los hijos absolutos se posicionen respecto a este */
+}
+
+.count-products {
+  position: absolute;
+  top: 55%;     
+  right: 0;   /* Lo pega al borde derecho del contenedor */
+  background-color: black;
+  color: rgb(255, 255, 255);
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+#contador-products {
+  font-size: 12px;
+}
+
+.container-cart-products {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: rgb(228, 107, 100);
+  width: 400px;
+  z-index: 1;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.icon-close {
+  width: 25px;
+  height: 25px; 
+}
+.icon-close:hover {
+  stroke: red;
+  cursor: pointer;
+}
+
+.cart-product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+.info-cart-product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 🔥 Alineación vertical aplicada */
+  flex: 0.8;
+  gap: 10px;
+}
+
+.titulo-producto-carrito,
+.precio-producto-carrito,
+.cantidad-producto-carrito {
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0;
+  display: flex;
+  align-items: center; /* 🔥 Centrado vertical aplicado */
+}
+
+.cart-total {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 🔥 Alineación vertical aplicada */
+  padding: 20px 0;
+  gap: 20px;
+}
+
+.cart-total h2,
+.total-pagar {
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0;
+  display: flex;
+  align-items: center; /* 🔥 Centrado vertical aplicado */
+}
+
+.contenedor-items {
+  display: grid;
+  grid-template-columns: repeat(3,1fr); 
+  gap: 10px; 
+}
+.item {
+  border-radius: 10px;
+}
+.item:hover {
+  box-shadow: 0 10px 20px rgb(0, 0 , 0, 0.50) ;
+}
+.item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  transition: all .9s; /* tiempo en el que se escala la img*/
+}
+.item figure {
+  overflow: hidden; /* es para que la imagen escale dentro del contenedor figure*/
+}
+.item:hover img {
+  transform: scale(1.2); /* como se escala la imagen al poner encima el cursor*/
+}
+.info-producto {
+  padding: 15px 30px;
+  line-height: 2; /*interlineado*/
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.precio {
+  font-size: 18px;
+  font-weight: 900;
+}
+.info-producto button {
+  border-radius: 10px;
+  border: none; /* elimina el borde blanco*/
+  background-color: black;
+  color: rgb(255, 255, 255);
+  padding: 15px 10px;
+  cursor: pointer;
+}
+.cruz-tienda {
+  width: 24px;
+  height: 24px;
+  stroke: rgb(255, 251, 251); /* o el color que quieras */
+  cursor: pointer;
+}
+.hidden-cart {
+  display: none;
+}
+/* header */
+.header-tienda 
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 40px 0  ;
+}
+.info-cart-product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; //Alineación vertical 
+  flex: 0.8;
+  gap: 10px;
+}
+
+.titulo-producto-carrito,
+.precio-producto-carrito,
+.cantidad-producto-carrito {
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0;
+  display: flex;
+  align-items: center; //  vertical aplicado
+}
+
+.cart-total {
+  display: flex;
+  justify-content: center;
+  align-items: center; // Alineación vertical 
+  padding: 20px 0;
+  gap: 20px;
+}
+
+.cart-total h2,
+.total-pagar {
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0;
+  display: flex;
+  align-items: center; //Centrado vertical 
+}

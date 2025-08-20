@@ -1,0 +1,47 @@
+/*  Tipografía (fuente) */
+@font-face {
+  font-family: 'Hortensia Regular';
+  src: url('../fonts/hortensia-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+// _variables.scss
+$color-fondo: rgb(71, 20, 17);
+$color-texto: white;
+
+
+$font-principal: 'Hortensia Regular', sans-serif;
+$font-secundaria: 'Playfair Display', serif;
+
+body {
+  background-color: $color-fondo;
+  margin: 0;
+  padding: 0;
+  font-family: $font-principal;
+  color: $color-texto;
+}
+
+
+@mixin mobile {
+  @media (max-width: 430px) {
+    @content;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

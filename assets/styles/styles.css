@@ -1,28 +1,71 @@
 @charset "UTF-8";
-#titulo-momentum {
+/*  Tipografía (fuente) */
+@font-face {
+  font-family: "Hortensia Regular";
+  src: url("../fonts/hortensia-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background-color: rgb(71, 20, 17);
+  margin: 0;
+  padding: 0;
+  font-family: "Hortensia Regular", sans-serif;
   color: white;
+}
+
+.header {
+  background-color: rgb(71, 20, 17);
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  display: block;
 }
 
 .texto-h1 {
   font-size: 50px;
-  color: rgba(255, 255, 255, 0.773);
+  color: white;
 }
 
-.typed-subtitulo {
-  font-family: "Playfair Display", serif;
-  color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  margin-top: 10px;
+#enlaces-paginas {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5vh;
+  padding: 30px;
 }
 
-.titulo-p {
-  text-align: center;
-  font-size: 2.5em;
-  font-weight: bold;
-  margin-top: 20px;
+main {
+  padding: 20px;
+  color: white;
+}
+main img {
+  width: 100%;
+  height: auto;
+  display: block;
   margin-bottom: 20px;
-  color: #ffffff;
-  font-family: "Segoe UI", sans-serif;
 }
 
 #carouselExampleFade {
@@ -31,14 +74,20 @@
 }
 
 #titulo-galeria {
-  color: blanchedalmond;
+  color: white;
 }
 
-main img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 20px;
+#titulo-momentum {
+  color: white;
+}
+
+.titulo-p {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 20px 0;
+  color: white;
+  font-family: "Playfair Display", serif;
 }
 
 .contacto {
@@ -46,6 +95,11 @@ main img {
   display: flex;
   gap: 15px;
   justify-content: space-around;
+}
+
+.logo-de-contacto {
+  width: 50px;
+  height: auto;
 }
 
 .form {
@@ -58,12 +112,6 @@ textarea {
   width: 20vw;
 }
 
-.logo-de-contacto {
-  width: 50px;
-  height: auto;
-}
-
-/* Áreas del formulario */
 .na {
   grid-area: na;
 }
@@ -128,9 +176,366 @@ textarea {
   grid-area: reset;
 }
 
+label {
+  grid-area: label;
+}
+
+input {
+  grid-area: input;
+}
+
 iframe {
   height: 50vw;
   width: 50vw;
+}
+
+/*  TIENDA  */
+.body-tienda {
+  margin: 0% auto;
+  max-width: 1200px;
+  background-color: rgb(71, 20, 17);
+}
+
+.icono-cart {
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  stroke: antiquewhite;
+}
+
+.icono-cart :hover {
+  cursor: pointer;
+}
+
+.titulo-tienda {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.item img.libro1 {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px; /* opcional: bordes suaves */
+}
+
+.img {
+  max-width: 100%;
+}
+
+.header-tienda {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0 40px 0;
+  align-items: center;
+}
+
+.contenedor-icono {
+  display: flex;
+  justify-content: flex-end; /* Todo alineado a la derecha */
+  align-items: center; /* Centrado vertical */
+  position: relative; /* Para que los hijos absolutos se posicionen respecto a este */
+}
+
+.count-products {
+  position: absolute;
+  top: 55%;
+  right: 0; /* Lo pega al borde derecho del contenedor */
+  background-color: black;
+  color: rgb(255, 255, 255);
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+#contador-products {
+  font-size: 12px;
+}
+
+.container-cart-products {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: rgb(228, 107, 100);
+  width: 400px;
+  z-index: 1;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.icon-close {
+  width: 25px;
+  height: 25px;
+}
+
+.icon-close:hover {
+  stroke: red;
+  cursor: pointer;
+}
+
+.cart-product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.info-cart-product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 🔥 Alineación vertical aplicada */
+  flex: 0.8;
+  gap: 10px;
+}
+
+.titulo-producto-carrito,
+.precio-producto-carrito,
+.cantidad-producto-carrito {
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0;
+  display: flex;
+  align-items: center; /* 🔥 Centrado vertical aplicado */
+}
+
+.cart-total {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 🔥 Alineación vertical aplicada */
+  padding: 20px 0;
+  gap: 20px;
+}
+
+.cart-total h2,
+.total-pagar {
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0;
+  display: flex;
+  align-items: center; /* 🔥 Centrado vertical aplicado */
+}
+
+.contenedor-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.item {
+  border-radius: 10px;
+}
+
+.item:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  transition: all 0.9s; /* tiempo en el que se escala la img*/
+}
+
+.item figure {
+  overflow: hidden; /* es para que la imagen escale dentro del contenedor figure*/
+}
+
+.item:hover img {
+  transform: scale(1.2); /* como se escala la imagen al poner encima el cursor*/
+}
+
+.info-producto {
+  padding: 15px 30px;
+  line-height: 2; /*interlineado*/
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.precio {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.info-producto button {
+  border-radius: 10px;
+  border: none; /* elimina el borde blanco*/
+  background-color: black;
+  color: rgb(255, 255, 255);
+  padding: 15px 10px;
+  cursor: pointer;
+}
+
+.cruz-tienda {
+  width: 24px;
+  height: 24px;
+  stroke: rgb(255, 251, 251); /* o el color que quieras */
+  cursor: pointer;
+}
+
+.hidden-cart {
+  display: none;
+}
+
+/* header */
+.header-tienda {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0 40px 0;
+}
+
+.info-cart-product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0.8;
+  gap: 10px;
+}
+
+.titulo-producto-carrito,
+.precio-producto-carrito,
+.cantidad-producto-carrito {
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  gap: 20px;
+}
+
+.cart-total h2,
+.total-pagar {
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 430px) {
+  .texto-h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+  #enlaces-paginas {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+  }
+  .logo {
+    width: 80px;
+    margin: auto;
+  }
+  main {
+    text-align: center;
+    padding: 10px;
+  }
+  main img {
+    width: 100%;
+    height: auto;
+  }
+  footer h2 {
+    font-size: 1rem;
+  }
+  .imagenes-apps {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .imagenes-apps img {
+    width: 40px;
+    height: 40px;
+  }
+}
+/*  Footer  */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+footer h2 {
+  text-align: center;
+}
+footer h2 h2 {
+  margin: 10px 0;
+  font-size: 1rem;
+  display: block;
+  width: 100%;
+}
+
+/*  Redes Sociales - */
+.imagenes-apps {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.imagenes-apps img {
+  object-fit: contain;
+  aspect-ratio: 1/1;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.3);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.3);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+.whatsapp {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  height: 50px;
+  width: 50px;
+  z-index: 1000;
+  border-radius: 50%;
+  background-color: #25D366;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: heartBeat 1.5s ease-in-out infinite;
+  transform-origin: center;
+}
+.whatsapp img {
+  width: 30px;
+  height: 30px;
+}
+.whatsapp:hover {
+  transform: scale(1.1);
+}
+
+body {
+  background-color: rgb(71, 20, 17);
 }
 
 /*# sourceMappingURL=styles.css.map */

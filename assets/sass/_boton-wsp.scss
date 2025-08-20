@@ -1,0 +1,44 @@
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.3);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.3);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  height: 50px;
+  width: 50px;
+  z-index: 1000;
+  border-radius: 50%;
+  background-color: #25D366;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: heartBeat 1.5s ease-in-out infinite;
+  transform-origin: center;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+

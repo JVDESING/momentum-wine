@@ -1,0 +1,16 @@
+@use 'variables' as v;
+@use 'header';
+@use 'home';
+@use 'contacto';
+@use 'tienda';
+@use 'galeria';
+@use 'sobre-nosotros';
+@use 'responsive';
+@use "footer" ;
+@use 'boton-wsp';
+
+
+
+body {
+  background-color: v.$color-fondo;
+}

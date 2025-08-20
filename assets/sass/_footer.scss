@@ -1,0 +1,37 @@
+@use 'variables' as v;
+
+/*  Footer  */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+footer h2 {
+  text-align: center;
+
+  h2 {
+    margin: 10px 0;
+    font-size: 1rem;
+    display: block; // por las dudas
+    width: 100%;    // asegura que ocupe todo el ancho del contenedor
+  }
+}
+
+
+/*  Redes Sociales - */
+.imagenes-apps {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.imagenes-apps img {
+  object-fit: contain;
+  aspect-ratio: 1 / 1;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}

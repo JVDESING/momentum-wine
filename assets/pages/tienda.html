@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Momentum - Tienda</title>
 </head>
-<body>
-            <header>
+<body class="body-tienda">
+            <header class="header-tienda">
             <a href="../../index.html">Home</a>
         <img src="../img/Logo Momentum.png" alt="Logo momentum" class="logo" title="Logo de Momentum">
         <h1 id="titulo-momentum">Momentum</h1><!-- h1 uno solo por archivo html -->
          <!-- las estiquetas "H" no se pueden saltear, son jerarquicas -->
          <!-- "ul" Lista desordenada// "ol" lista ordenada// "li" item de lista-->
-        </nav>
+        <nav>
             <ul id="enlaces-paginas">
                 <li >
                 <a href="./galeria.html">galeria</a>
@@ -30,8 +30,112 @@
 
 
             </ul>
-        </nav>
-    </header>
+        </nav>              
+ </header>
+ <main> 
+            <!--           TIENDA        -->
+            <!-- LA ETIQUETA FIGURE SE USA PARA CONTENER LA ESCALA-->
+             <div class="contenedor-icono">
+                 <h2 class="titulo-tienda"> Tienda</h2> 
+                 <!-- SVG DEL CARRITO DE COMPRA-->
+                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icono-cart"> 
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                   </svg>
+                <div class="count-products">
+                   <span id="contador-products">
+                    </span>
+                    <div class="container-cart-products hidden-cart">
+                        <div class="cart-product">
+                            <div class="info-cart-product">
+                            <span class="cantidad-producto-carrito">1</span>
+                            <p class="titulo-producto-carrito"> Libro Momentum gato</p>
+                            <span class="precio-producto-carrito">$20000</span>
+                            </div> 
+                            <!--  SVG DE "x" DE LA tienda  -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cruz-tienda">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+
+                        </div>
+                        <div class="cart-total">
+                            <h3>TOTAL:</h3>
+                            <span class="total-pagar">$20000</span>
+                        </div>
+                    </div>
+                            
+
+
+               </div>
+               </div>
+
+               <div class="contenedor-items">
+                <!-- PRODUCTO 1  -->
+                <div class="item">
+                    <figure>
+                    <img src="../img/tapa tienda 1.jpg" alt="libro 1" class="libro1">  
+                    </figure>  
+                    <div class="info-producto">
+                    <h3>Libro momentum gato negro</h3>
+                    <p class="precio">$20000</p>
+                    <button> Añadir carrito </button>
+                     </div> 
+                </div>
+                <!-- PRODUCTO 2  -->
+                <div class="item">
+                    <figure>
+                    <img src="../img/tapa tienda 2.jpg" alt="libro 1" class="libro1">  
+                    </figure>  
+                    <div class="info-producto">
+                    <h3>Libro momentum gato negro</h3>
+                    <p class="precio">$20000</p>
+                    <button> Añadir carrito </button>
+                     </div> 
+                </div>
+                <!-- PRODUCTO 3  -->
+                <div class="item">
+                    <figure>
+                    <img src="../img/tapa tienda 3.jpg" alt="libro 1" class="libro1">  
+                    </figure>  
+                    <div class="info-producto">
+                    <h3>Libro momentum gato negro</h3>
+                    <p class="precio">$20000</p>
+                    <button> Añadir carrito </button>
+                     </div> 
+                </div>
+                <!-- PRODUCTO 4  -->
+                <div class="item">
+                    <figure>
+                    <img src="../img/tapa tienda 4.jpg" alt="libro 1" class="libro1">  
+                    </figure>  
+                    <div class="info-producto">
+                    <h3>Libro momentum gato negro</h3>
+                    <p class="precio">$20000</p>
+                    <button> Añadir carrito </button>
+                     </div> 
+                </div>
+
+                <!-- PRODUCTO 5  -->
+                <div class="item">
+                    <figure>
+                    <img src="../img/tapa tienda 5.jpg" alt="libro 1" class="libro1">  
+                    </figure>  
+                    <div class="info-producto">
+                    <h3>Libro momentum gato negro</h3>
+                    <p class="precio">$20000</p>
+                    <button> Añadir carrito </button>
+                     </div> 
+                </div>
+
+
+
+
+               </div>
+             <!--       FIN DE TIENDA            -->
+
+
+</main>
+        
+    
             <footer>
         <h2>Derechos reservados momentum</h2>
         <h2>Hecho por Vazquezdesign</h2>
@@ -44,7 +148,7 @@
             </li>
             <li>
                 <a href="https://wa.me/3513838930" target="_blank">
-                    <img src="../img/logo wsp.webp" alt="Logo de whatsapp">
+                    <img src="../img/logo wsp.webp" alt="Logo de whatsapp" class="whatsapp">
                 </a>
             </li>
             <li>
@@ -62,6 +166,6 @@
     </nav>
    </footer>
 
-    
+    <script src="../../index.js"></script>
 </body>
 </html>

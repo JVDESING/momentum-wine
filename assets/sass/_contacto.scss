@@ -1,0 +1,57 @@
+@use 'variables' as v;
+.contacto {
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  justify-content: space-around;
+}
+
+.logo-de-contacto {
+  width: 50px;
+  height: auto;
+}
+
+.form {
+  display: grid;
+  grid-template-areas:
+    "na. name name"
+    "ag. age age"
+    "em. email email"
+    "pass. password password"
+    "se. selector selector"
+    "fe. fecha fecha"
+    "comm. . . ."
+    "comment comment comment"
+    ". enviar reset";
+}
+
+textarea {
+  height: 10vw;
+  width: 20vw;
+}
+
+// Áreas individuales
+.na { grid-area: na; }
+.name { grid-area: name; }
+.ag { grid-area: ag; }
+.age { grid-area: age; }
+.em { grid-area: em; }
+.email { grid-area: email; }
+.pass { grid-area: pass; }
+.password { grid-area: password; }
+.se { grid-area: se; }
+.selector { grid-area: selector; }
+.fe { grid-area: fe; }
+.fecha { grid-area: fecha; }
+.comm { grid-area: comm; }
+.comment { grid-area: comment; }
+.enviar { grid-area: enviar; }
+.reset { grid-area: reset; }
+
+label { grid-area: label; }
+input { grid-area: input; }
+
+iframe {
+  height: 50vw;
+  width: 50vw;
+}

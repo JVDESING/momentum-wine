@@ -1,0 +1,43 @@
+@use 'variables' as v;
+@media screen and (max-width: 430px) {
+  .texto-h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  #enlaces-paginas {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .logo {
+    width: 80px;
+    margin: auto;
+  }
+
+  main {
+    text-align: center;
+    padding: 10px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  footer h2 {
+    font-size: 1rem;
+  }
+
+  .imagenes-apps {
+    justify-content: center;
+    flex-wrap: wrap;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
